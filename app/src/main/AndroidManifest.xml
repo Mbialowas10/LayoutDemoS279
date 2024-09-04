@@ -13,6 +13,9 @@
         android:theme="@style/Theme.LayoutDemoS279"
         tools:targetApi="31">
         <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".ConstraintActivity"
             android:exported="true">
             <intent-filter>
@@ -22,13 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RelativeActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
+        <activity
+            android:name=".RelativeActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
