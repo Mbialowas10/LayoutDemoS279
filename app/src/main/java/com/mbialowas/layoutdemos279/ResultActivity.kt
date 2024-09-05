@@ -17,13 +17,12 @@ class ResultActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // receive parameters from the previous activity
-        val name = intent.getStringExtra("name")
-        val registered = intent.getBooleanExtra("registered", false)
 
-        // display the parameters in a TextView
-        findViewById<TextView>(R.id.tv_result).setText(
-            "Hello $name! ${if (registered) "You are registered" else "You are not registered yet"}"
-        )
+        // receive the intent
+        val bundle: Bundle? = intent.extras
+        val input = bundle?.getString("name")
+        val registered = bundle?.getBoolean("registered")
+
+        findViewById<TextView>(R.id.tv_results).setText("Hello $input! ${if (registered == false) "Please register for exciting event on gardening:)" else "Thank you for registering!"}")
     }
 }

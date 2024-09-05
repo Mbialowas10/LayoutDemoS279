@@ -25,23 +25,23 @@ class ConstraintActivity : AppCompatActivity() {
         val et_name = findViewById<EditText>(R.id.et_name)
         val cb_registered = findViewById<CheckBox>(R.id.cb_registered)
 
-        val btnExternalControl = findViewById<Button>(R.id.btnExternalControl)
+        val btn_param = findViewById<Button>(R.id.btn_param)
 
         btn_submit.setOnClickListener {
-            // do something when the button is clicked
+            intent = Intent(this, RelativeActivity::class.java)
+            startActivity(intent)
+        }
+
+        btn_param.setOnClickListener {
             intent = Intent(this, ResultActivity::class.java)
-            // pass parameters to the next activity
             intent.putExtra("name", et_name.text.toString())
             intent.putExtra("registered", cb_registered.isChecked)
-
             startActivity(intent)
         }
 
-        btnExternalControl.setOnClickListener {
-            // do something when the button is clicked
-            intent = Intent(Intent.ACTION_VIEW)
-            intent.setData(Uri.parse("https://www.cnn.com"))
-            startActivity(intent)
-        }
+
+
+
+
     }
 }

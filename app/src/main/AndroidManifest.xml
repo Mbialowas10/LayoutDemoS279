@@ -29,7 +29,7 @@
             android:exported="true" />
         <activity
             android:name=".RelativeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

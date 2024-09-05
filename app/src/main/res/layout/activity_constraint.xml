@@ -53,9 +53,10 @@
         android:id="@+id/btn_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_marginEnd="11dp"
         android:text="Button"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnExternalControl"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_param"
+        app:layout_constraintEnd_toStartOf="@+id/btn_param"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -75,18 +76,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="29dp"
         android:text="Are  you registered"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_name" />
 
     <Button
-        android:id="@+id/btnExternalControl"
+        android:id="@+id/btn_param"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="39dp"
-        android:text="Go to CNN webpage"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="29dp"
+        android:text="passing parameters"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_submit"
         app:layout_constraintTop_toBottomOf="@+id/cb_registered" />
 

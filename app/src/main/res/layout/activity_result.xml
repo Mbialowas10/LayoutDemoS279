@@ -5,14 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F44336"
+    android:background="#DE0E0E"
     tools:context=".ResultActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="127dp" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_results"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteY="299dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
