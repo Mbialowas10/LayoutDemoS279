@@ -1,6 +1,7 @@
 package com.mbialowas.layoutdemos279
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -24,6 +25,8 @@ class ConstraintActivity : AppCompatActivity() {
         val et_name = findViewById<EditText>(R.id.et_name)
         val cb_registered = findViewById<CheckBox>(R.id.cb_registered)
 
+        val btnExternalControl = findViewById<Button>(R.id.btnExternalControl)
+
         btn_submit.setOnClickListener {
             // do something when the button is clicked
             intent = Intent(this, ResultActivity::class.java)
@@ -31,6 +34,13 @@ class ConstraintActivity : AppCompatActivity() {
             intent.putExtra("name", et_name.text.toString())
             intent.putExtra("registered", cb_registered.isChecked)
 
+            startActivity(intent)
+        }
+
+        btnExternalControl.setOnClickListener {
+            // do something when the button is clicked
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.cnn.com"))
             startActivity(intent)
         }
     }
