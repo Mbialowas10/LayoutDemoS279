@@ -27,6 +27,8 @@ class ConstraintActivity : AppCompatActivity() {
 
         val btn_param = findViewById<Button>(R.id.btn_param)
 
+        val btn_ext_ctrl = findViewById<Button>(R.id.btn_ext_ctrl)
+
         btn_submit.setOnClickListener {
             intent = Intent(this, RelativeActivity::class.java)
             startActivity(intent)
@@ -38,6 +40,14 @@ class ConstraintActivity : AppCompatActivity() {
             intent.putExtra("registered", cb_registered.isChecked)
             startActivity(intent)
         }
+
+        btn_ext_ctrl.setOnClickListener {
+            intent = Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse("https://www.cnn.com"))
+            //intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.cnn.com"))
+            startActivity(intent)
+        }
+
 
 
 

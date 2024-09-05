@@ -54,8 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="11dp"
+        android:layout_marginBottom="11dp"
         android:text="Button"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btn_param"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ext_ctrl"
         app:layout_constraintEnd_toStartOf="@+id/btn_param"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -85,11 +86,21 @@
         android:id="@+id/btn_param"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
         android:layout_marginEnd="29dp"
+        android:layout_marginBottom="11dp"
         android:text="passing parameters"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ext_ctrl"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_submit"
-        app:layout_constraintTop_toBottomOf="@+id/cb_registered" />
+        app:layout_constraintStart_toEndOf="@+id/btn_submit" />
+
+    <Button
+        android:id="@+id/btn_ext_ctrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Launch CNN..."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
